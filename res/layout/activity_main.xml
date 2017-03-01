@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_top_bar"
+        android:layout_alignParentTop="true"
+        android:background="@color/common_top_bar_blue" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="@string/app_title"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        <!-- <ImageView
+            android:id="@+id/iv_add"
+            android:layout_width="56dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:clickable="true"
+            android:src="@drawable/main_activity_add" />
+
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="56dp"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/iv_add"
+            android:clickable="true"
+            android:src="@drawable/main_activity_search" />  -->
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/main_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/linearlayout"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/re_home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onTabClicked"
+            android:padding="3dp" >
+
+            <ImageView
+                android:id="@+id/ib_home"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_centerHorizontal="true"
+                android:background="#ffffff"
+                android:focusable="false"
+                android:scaleType="centerInside"
+                android:contentDescription="@string/iv_content_home" />
+
+            <TextView
+                android:id="@+id/tv_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ib_home"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="3dp"
+                android:text="@string/page_home"
+                android:textColor="#9A9A9A"
+                android:textSize="12sp" />
+
+            <!-- <TextView
+                android:id="@+id/unread_msg_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:text="7"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" /> -->
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/re_comm"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onTabClicked"
+            android:padding="3dp" >
+
+            <ImageView
+                android:id="@+id/ib_comm"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_centerHorizontal="true"
+                android:background="#ffffff"
+                android:focusable="false"
+                android:scaleType="centerInside"
+                android:contentDescription="@string/iv_content_comm" />
+
+            <TextView
+                android:id="@+id/tv_comm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ib_comm"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="3dp"
+                android:text="@string/page_comm"
+                android:textColor="#9A9A9A"
+                android:textSize="12sp" />
+
+            <!-- <TextView
+                android:id="@+id/unread_address_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:text="7"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" /> -->
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/re_setting"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onTabClicked"
+            android:padding="3dp" >
+
+            <ImageView
+                android:id="@+id/ib_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_centerHorizontal="true"
+                android:background="#ffffff"
+                android:focusable="false"
+                android:scaleType="centerInside"
+                android:contentDescription="@string/iv_content_setting" />
+
+            <TextView
+                android:id="@+id/tv_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ib_setting"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="3dp"
+                android:text="@string/page_setting"
+                android:textColor="#9A9A9A"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_temp"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_above="@id/main_bottom"
+        android:background="#d6d6d6" />
+    
+    <!-- <LinearLayout
+        android:id="@+id/netexception"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title"
+        android:gravity="center|center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|center_horizontal"
+            android:padding="@dimen/paddingsize"
+            android:text="@string/netexception" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/nodata"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title"
+        android:gravity="center|center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|center_horizontal"
+            android:padding="@dimen/paddingsize"
+            android:text="@string/nodata" />
+    </LinearLayout>
+        
+    <com.pin.pinwine.view.CircularProgress
+        android:id="@+id/progressbar"
+        android:layout_width="@dimen/progresssize"
+        android:layout_height="@dimen/progresssize"
+        android:layout_centerInParent="true"
+        app:borderWidth="@dimen/progresskuan" />
+    
+    <com.pin.pinwine.view.XListView
+        android:id="@+id/listView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/title"
+        android:layout_above="@id/view_temp"
+        android:divider="@color/divider_color"
+        android:dividerHeight="2dp" />
+ -->
+
+
+    <RelativeLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/view_temp"
+        android:layout_below="@id/title" />
+
+
+</RelativeLayout>
